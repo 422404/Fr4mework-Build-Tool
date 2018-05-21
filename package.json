@@ -1,0 +1,11 @@
+{
+  "name": "fr4mework-build-tool",
+  "version": "1.0.0",
+  "description": "Build Fr4mework and its modules",
+  "author": "422404",
+  "main": "./lib/lib.js",
+  "bin": {
+    "fr4metool": "bin/fr4metool.js"
+  },
+  "preferGlobal": true
+}

@@ -1,0 +1,13 @@
+{
+    "name": "myModule",
+    "build": {
+        "builddir": "./build",
+        "files": [
+            "./src/file1.js",
+            "./src/file2.js"
+        ],
+        "modules": [
+            "./src/module"
+        ]
+    }
+}
