@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Build Fr4mework and its modules",
   "author": "422404",
-  "main": "./lib/index.js",
+  "main": "bin/fr4metool.js",
   "bin": {
     "fr4metool": "bin/fr4metool.js"
   },

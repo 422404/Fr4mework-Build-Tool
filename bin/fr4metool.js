@@ -11,9 +11,9 @@ function help() {
     var helpText =
         "Fr4mework Build Tool\'s Help\n" +
         "----------------------------\n" +
-        "Syntax : fr4metool build|list|clean [--all]\n\n" +
+        "Syntax : fr4metool build|list|clean [--all, --no-preprocess]\n\n" +
         "build  : builds the modules from the current dir\n" +
-        "         --preprocess-dev : __LINE__ and __FILE__ are set to the non concatenated values\n\n" +
+        "         --no-preprocess : ... do not preprocess the files ...\n\n" +
         "list   : lists the modules from the current dir\n" +
         "         --all : lists the non-buildables modules (those with no 'builddir' or 'files' properties)\n\n" +
         "clean  : cleans the build dirs of the modules of the current dir\n";
@@ -29,17 +29,26 @@ function main(argv) {
     if (argv.length < 3) {
         help();
     } else {
-        if (argv[2] == 'build') {
-            build(argv.includes('--preprocess-dev'));
-        } else if (argv[2] == 'help') {
-            help();
-        } else if (argv[2] == 'list') {
-            list(argv.includes('--all'));
-        } else if (argv[2] == 'clean') {
-            clean();
-        } else {
-            console.log('Syntax error !' , "\n");
-            help();
+        switch (argv[2]) {
+            case 'build':
+                build(!argv.includes('--no-preprocess'));
+                break;
+
+            case 'help':
+                help();
+                break;
+
+            case 'list':
+                list(argv.includes('--all'));
+                break;
+
+            case 'clean':
+                clean();
+                break;
+
+            default:
+                console.log('Syntax error !' , "\n");
+                help();
         }
     }
 }
