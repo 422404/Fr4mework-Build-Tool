@@ -1,5 +1,8 @@
-# Fr4mework Build Tool
+# Fr4mework Build Tool (Discontinued)
 ## Description :
+Aborted build system for the Fr4mework. It was made before designing the Fr4mework so it's basically just a try at creating a code packer. Will remain here for archival purpose.
+
+Original description:
 Helps building the Fr4mework and its modules.
 
 ## Installation :
